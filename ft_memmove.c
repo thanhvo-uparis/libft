@@ -6,7 +6,7 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 21:19:49 by tvo               #+#    #+#             */
-/*   Updated: 2022/11/12 10:55:28 by tvo              ###   ########.fr       */
+/*   Updated: 2022/11/12 16:17:31 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,8 @@ void    *ft_memmove(void *dest, void *src, size_t n)
 
 int main()
 {
-    char dest[] = "student42";
-    char src[] = "abc";
-    size_t n;
-
-    n = 2;
-    // ft_memmove(dest, src, n);
-    memmove(dest, src, n);
-    printf("%s", dest);
+    char str[50] = "C learning is good";
+    printf("before: %s \n", str);
+    memmove(str, &str[5], 10);
+    printf("after: %s", str);
 }
