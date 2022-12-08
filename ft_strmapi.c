@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/05 16:58:21 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/07 21:48:09 by tvo              ###   ########.fr       */
+/*   Created: 2022/12/07 22:42:19 by tvo               #+#    #+#             */
+/*   Updated: 2022/12/07 23:52:01 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,39 @@
 #include <stdlib.h>
 #include <string.h>
 
-char	*ft_strdup(char *s)
+char	*ft_strmapi(char *s, char (*f)(unsigned int, char))
 {
-	char	*ptr;
-	int		size;
 	int		i;
+	int		str_len;
+	char		*ptr;
 
 	i = 0;
-	size = strlen(s);
+	str_len = strlen(s);
 	if (!s)
 		return (NULL);
-	ptr = (char *)malloc(sizeof(char) * (size + 1));
+	ptr = (char *)malloc(sizeof(char) * (str_len + 1));
 	if (!ptr)
 		return (NULL);
-	while (s[i])
+	while (i < str_len)
 	{
-		*(ptr + i)  =  s[i];
+		ptr[i] = f((unsigned int)i, s[i]);
 		i++;
 	}
 	ptr[i] = '\0';
 	return (ptr);
 }
 
-int main()
+char	fp(unsigned int i, char c)
 {
-	char	example[] = "student 42";
-	char	*target;
+	(void)i;
+	return (c += 1);
+}
+
+int		main()
+{
+	char	str1[] = "abc";
+	char	*str2;
+	
+	str2 = ft_strmapi(str1, *fp);
+	printf("%s \n", str2);
 }

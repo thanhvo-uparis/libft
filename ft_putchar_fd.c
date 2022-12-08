@@ -1,42 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/11 21:18:51 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/07 20:21:21 by tvo              ###   ########.fr       */
+/*   Created: 2022/12/08 04:32:21 by tvo               #+#    #+#             */
+/*   Updated: 2022/12/08 04:40:46 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <string.h>
+#include <unistd.h>
+#include <fcntl.h>
 
-void	ft_bzero(void *ptr, size_t count)
+void	ft_putchar_fd(char c, int fd)
 {
-	size_t	i;
+	write(fd, &c, 1);
+}
 
-	if (!ptr)
-		return ;
-	i = 0;
-	while (i < count)
+int 	main()
+{
+	int fd;
+
+	fd = open("/mnt/nfs/homes/tvo/Downloads/new_test.txt", O_WRONLY);
+	if (fd == -1)
 	{
-		*(unsigned *)(ptr + i) = 0;
-		i++;
+		printf("open() failed!\n");
+		return (1);
+	}
+	ft_putchar_fd('5', fd);
+	if (close(fd) == -1)
+	{
+		printf("close() failed!\n");
+		return (1);
 	}
 }
-/*
-int	main()
-{
-	char buffer[10];
-	size_t count;
-
-	count = 8;
-	ft_bzero(buffer, count);
-	buffer[9] = 'a';
-	for (int i = 0; i < 10; i++)
-		printf("%c", buffer[i]);
-	printf("\n");
-}
-*/

@@ -1,42 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/11 21:18:51 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/07 20:21:21 by tvo              ###   ########.fr       */
+/*   Created: 2022/12/07 23:59:52 by tvo               #+#    #+#             */
+/*   Updated: 2022/12/08 00:36:37 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <string.h>
 
-void	ft_bzero(void *ptr, size_t count)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	size_t	i;
+	unsigned int	i;
 
-	if (!ptr)
-		return ;
 	i = 0;
-	while (i < count)
+	if (!s || !f)
+		return ;
+	while (s[i])
 	{
-		*(unsigned *)(ptr + i) = 0;
+		f(i, &s[i]);
 		i++;
 	}
 }
-/*
-int	main()
-{
-	char buffer[10];
-	size_t count;
 
-	count = 8;
-	ft_bzero(buffer, count);
-	buffer[9] = 'a';
-	for (int i = 0; i < 10; i++)
-		printf("%c", buffer[i]);
-	printf("\n");
+void	f(unsigned int i, char *a)
+{
+	*a += 1;
 }
-*/
+
+int		main()
+{
+	char	str1[] = "cde";
+
+	ft_striteri(str1, *f);
+	printf("%s", str1);
+}

@@ -1,43 +1,68 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/05 16:58:21 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/07 21:48:09 by tvo              ###   ########.fr       */
+/*   Created: 2022/12/07 17:02:34 by tvo               #+#    #+#             */
+/*   Updated: 2022/12/07 21:12:43 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-char	*ft_strdup(char *s)
+int ft_len(int nb)
 {
-	char	*ptr;
-	int		size;
+	int		count;
+
+	count = 0;
+	if (nb < 0)
+	{
+		count++;
+		nb *= -1;
+	}
+	while (nb > 0)
+	{
+		nb /= 10;
+		count++;
+	}
+	return (count);
+}
+
+char	*ft_itoa(int n)
+{
 	int		i;
+	int		len_nb;
+	char	*ptr;
 
 	i = 0;
-	size = strlen(s);
-	if (!s)
-		return (NULL);
-	ptr = (char *)malloc(sizeof(char) * (size + 1));
+	len_nb = ft_len(n);
+	ptr = (char *)malloc(sizeof(char) * (len_nb + 1));
 	if (!ptr)
 		return (NULL);
-	while (s[i])
+	ptr[len_nb--] = '\0';
+	if (n == 0)
 	{
-		*(ptr + i)  =  s[i];
-		i++;
+		ptr[0] = 48;
+		return (ptr);
 	}
-	ptr[i] = '\0';
+	if (n < 0)
+	{
+		ptr[0] = '-';
+		n *= -1;
+	}
+	while (n > 0)
+	{
+		ptr[len_nb] = (n % 10) + '0';
+		n /= 10;
+		len_nb--;
+	}
 	return (ptr);
 }
 
-int main()
+int	main()
 {
-	char	example[] = "student 42";
-	char	*target;
+	printf("%s", ft_itoa(+4741));
 }
