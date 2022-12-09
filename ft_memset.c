@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	*ft_menset(void *dest, int ch, size_t count)
+void	*ft_memset(void *dest, int ch, size_t count)
 {
 	size_t	i;
 
@@ -26,13 +26,13 @@ void	*ft_menset(void *dest, int ch, size_t count)
 	}
 	return (dest);
 }
+
 /*
 int main()
 {
     char buffer[10];
 
-    ft_menset(buffer, 'c', sizeof(char) * 10);
+    memset(buffer, 'c', sizeof(char) * 10);
     for (int i = 0; i < 10; i++)
         printf("%c", buffer[i]);
-}
-*/
+}*/

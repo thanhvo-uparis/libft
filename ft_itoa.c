@@ -32,11 +32,9 @@ int	ft_len(int nb)
 
 char	*ft_itoa(int n)
 {
-	int		i;
 	int		len_nb;
 	char	*ptr;
 
-	i = 0;
 	len_nb = ft_len(n);
 	ptr = (char *)malloc(sizeof(char) * (len_nb + 1));
 	if (!ptr)

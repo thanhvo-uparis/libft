@@ -6,11 +6,12 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 21:18:51 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/09 16:25:13 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/09 21:07:30 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <strings.h>
 
 void	ft_bzero(void *ptr, size_t count)
 {
@@ -21,21 +22,32 @@ void	ft_bzero(void *ptr, size_t count)
 	i = 0;
 	while (i < count)
 	{
-		*(unsigned *)(ptr + i) = 0;
+		*(char *)(ptr + i) = 0;
 		i++;
 	}
 }
 /*
 int	main()
 {
-	char buffer[10];
-	size_t count;
+	char tab[100];
+	char tab2[100];
 
-	count = 8;
-	ft_bzero(buffer, count);
-	buffer[9] = 'a';
-	for (int i = 0; i < 10; i++)
-		printf("%c", buffer[i]);
+	memset(tab, 'A', 100);
+	memset(tab2, 'A', 100);
+
+	ft_bzero(tab, 42);
+	bzero(tab2, 42);
+	// check 1: check(tab[0] == 'A')
+	printf("tab[42] : %c \n", tab[0]);
+	printf("tab[42] : %c \n", tab2[0]);
+	printf("\n--------------------------------------\n\n");
+	// check 2: check(i == 42 && tab[42] == 'A')
+	int i = 0;
+	for (; i < 100 && (tab[i] == 0); i++)
+	{
+		printf("i = %i, valeur tab[i]: %c \n", i, tab[i]);
+	}
+	printf("i = %i, tab[i] : %c", i, tab[i]);
 	printf("\n");
 }
 */

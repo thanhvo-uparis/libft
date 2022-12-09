@@ -29,9 +29,9 @@ int	is_exist(char ch, char *set)
 
 char	*ft_strtrim(char *s1, char *set)
 {
-	int	i;
-	int	debut;
-	int	fin;
+	int		i;
+	int		debut;
+	int		fin;
 	char	*ptr;
 
 	i = 0;

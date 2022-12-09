@@ -25,27 +25,28 @@ typedef struct	s_list
 	struct	s_list	*next;
 }	t_list;
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int c);
-int	ft_isascii(int c);
-int	ft_isprint(int c);
-void	*ft_menset(void *dest, int ch, size_t count);
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
+void	*ft_memset(void *dest, int ch, size_t count);
 void	ft_bzero(void *ptr, size_t count);
-void    *ft_memcpy(void *dest, void *src, size_t n);
-void    *ft_memmove(void *dest, void *src, size_t n);
-size_t ft_strlcpy(char *dest, char *src, size_t destsize);
+void    *ft_memcpy(void *dest, const void *src, size_t n);
+void    *ft_memmove(void *dest, const void *src, size_t n);
+size_t 	ft_strlcpy(char *dest, char *src, size_t destsize);
+size_t	ft_strlen(char *str);
 /* ft_strlcat */
 
-int ft_toupper(int c);
-int ft_tolower(int c);
+int 	ft_toupper(int c);
+int 	ft_tolower(int c);
 char	*ft_strchr(char *str, int c);
-char *ft_strrchr(char *str, int c);
-int ft_strncmp(char *s1, char *s2, size_t n);
-void *ft_memchr(void *s, int c, size_t n);
-int ft_memcmp(void *s1, void *s2, size_t n);
+char 	*ft_strrchr(char *str, int c);
+int 	ft_strncmp(const char *s1, const char *s2, size_t n);
+void 	*ft_memchr(void *s, int c, size_t n);
+int 	ft_memcmp(void *s1, void *s2, size_t n);
 char	*ft_strnstr(char *big, char *little, size_t len);
-int ft_atoi(char *str);
+int 	ft_atoi(char *str);
 void *ft_calloc(size_t count, size_t sz);
 char	*ft_strdup(char *s);
 char	*ft_substr(char *s, unsigned int start, size_t len);

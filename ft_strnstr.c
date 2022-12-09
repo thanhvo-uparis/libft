@@ -16,7 +16,6 @@
 char	*ft_strnstr(char *big, char *little, size_t len)
 {
 	size_t	i;
-	int		j;
 
 	if (!little)
 		return (big);
@@ -32,11 +31,12 @@ char	*ft_strnstr(char *big, char *little, size_t len)
 	return (little);
 }
 /*
+#include <bsd/string.h>
 int main(void) {
     char *str1 = "Foo Bar Baz";
     char *str2 = "Bar";
 
-    printf("found: %s\n", ft_strnstr(str1, str2, 4) ? "yes" : "no");
+    printf("found: %s\n", strnstr(str1, str2, 4) ? "yes" : "no");
     return 0;
-}
-*/
+}*/
+

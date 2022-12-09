@@ -6,17 +6,18 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 05:10:38 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/09 16:47:24 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/09 22:18:21 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_abs(int nb)
+int	ft_abs(int nb)
 {
 	return ((nb < 0) ? (-1 * nb) : nb);
 }
 
+/*
 void ft_putnbr_fd(int n, int fd)
 {
 
@@ -39,3 +40,4 @@ int 	main()
 		return (1);
 	}
 }
+*/
