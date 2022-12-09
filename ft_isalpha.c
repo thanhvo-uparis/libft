@@ -6,19 +6,20 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 21:59:12 by tvo               #+#    #+#             */
-/*   Updated: 2022/11/18 22:18:25 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/09 16:27:46 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int ft_isalpha(int c) 
+int	ft_isalpha(int c)
 {
-   return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122));
+	return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122));
 }
-
+/*
 int main(void)
 {
     printf("%d", ft_isalpha('('));
     return (0);
 }
+*/

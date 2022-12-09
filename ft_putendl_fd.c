@@ -6,22 +6,23 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 05:02:15 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/08 05:10:58 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/09 16:47:21 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
-#include <unistd.h>
-#include <fcntl.h>
+#include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
+	char	c;
+
+	c = '\n';
 	if (!s)
 		return ;
 	write(fd, s, strlen(s));
+	write(1, &c, 1);
 }
-
+/*
 int 	main()
 {
 	int fd;
@@ -32,10 +33,11 @@ int 	main()
 		printf("open() failed!\n");
 		return (1);
 	}
-	ft_putstr_fd("WELCOME TO", fd);
+	ft_putendl_fd("TEST dernier fois", fd);
 	if (close(fd) == -1)
 	{
 		printf("close() failed!\n");
 		return (1);
 	}
 }
+*/

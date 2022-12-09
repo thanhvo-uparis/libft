@@ -6,14 +6,11 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 05:10:38 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/08 05:18:16 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/09 16:47:24 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
-#include <unistd.h>
-#include <fcntl.h>
+#include "libft.h"
 
 int		ft_abs(int nb)
 {
@@ -22,7 +19,7 @@ int		ft_abs(int nb)
 
 void ft_putnbr_fd(int n, int fd)
 {
-	
+
 }
 
 int 	main()

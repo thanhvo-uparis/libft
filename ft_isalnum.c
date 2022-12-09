@@ -6,17 +6,16 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 23:28:29 by tvo               #+#    #+#             */
-/*   Updated: 2022/11/11 20:41:44 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/09 16:26:45 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int ft_isalnum(int c) 
+int	ft_isalnum(int c)
 {
-   return (ft_isalpha(c) || ft_isdigit(c));
+	return (ft_isalpha(c) || ft_isdigit(c));
 }
-
 /*
 int main(void)
 {

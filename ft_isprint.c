@@ -6,13 +6,13 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 17:57:43 by tvo               #+#    #+#             */
-/*   Updated: 2022/11/11 20:38:45 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/09 16:28:54 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    return(c >= 32 && c <= 126);
+	return (c >= 32 && c <= 126);
 }

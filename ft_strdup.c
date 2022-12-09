@@ -6,13 +6,11 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 16:58:21 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/07 21:48:09 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/09 16:50:16 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strdup(char *s)
 {
@@ -35,9 +33,10 @@ char	*ft_strdup(char *s)
 	ptr[i] = '\0';
 	return (ptr);
 }
-
+/*
 int main()
 {
 	char	example[] = "student 42";
 	char	*target;
 }
+*/

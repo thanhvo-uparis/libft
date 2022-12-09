@@ -6,33 +6,11 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 04:43:14 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/08 05:01:21 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/09 16:48:00 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <unistd.h>
-#include <fcntl.h>
-
-// void	ft_putchar_fd(char c, int fd)
-// {
-// 	write(fd, &c, 1);
-// }
-
-// void	ft_putstr_fd(char *s, int fd)
-// {
-// 	int		i;
-// 	int		str_len;
-
-// 	i = 0;
-// 	str_len = strlen(s);
-// 	while (i < str_len)
-// 	{
-// 		ft_putchar_fd(s[i], fd);
-// 		i++;
-// 	}
-// }
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {
@@ -40,8 +18,8 @@ void	ft_putstr_fd(char *s, int fd)
 		return ;
 	write(fd, s, strlen(s));
 }
-
-int 	main()
+/*
+int	main()
 {
 	int fd;
 
@@ -58,3 +36,4 @@ int 	main()
 		return (1);
 	}
 }
+*/

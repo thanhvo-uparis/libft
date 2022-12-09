@@ -6,17 +6,16 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 17:57:05 by tvo               #+#    #+#             */
-/*   Updated: 2022/11/18 22:17:26 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/09 16:28:05 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int ft_isascii(int c) 
+int	ft_isascii(int c)
 {
-   return (c >= 0 && c <= 127);
+	return (c >= 0 && c <= 127);
 }
-
 /*
 int main(void)
 {

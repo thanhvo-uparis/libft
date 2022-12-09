@@ -6,14 +6,13 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 17:09:27 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/07 20:20:56 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/09 16:50:10 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-int		ft_count_string(char *str, char sep)
+int	ft_count_string(char *str, char sep)
 {
 	int		i;
 	int		count;
@@ -32,7 +31,7 @@ int		ft_count_string(char *str, char sep)
 	return (count);
 }
 
-int ft_lenword(char *str, char sep)
+int	ft_lenword(char *str, char sep)
 {
 	int		count;
 
@@ -42,7 +41,7 @@ int ft_lenword(char *str, char sep)
 	return (count);
 }
 
-char *ft_word(char *str, char sep)
+char	*ft_word(char *str, char sep)
 {
 	int		i;
 	int		len_word;
@@ -62,7 +61,7 @@ char *ft_word(char *str, char sep)
 	return (word);
 }
 
-char **ft_split(char *s, char c)
+char	**ft_split(char *s, char c)
 {
 	int		i;
 	char	**strings;
@@ -86,7 +85,7 @@ char **ft_split(char *s, char c)
 	strings[i] = '\0';
 	return (strings);
 }
-
+/*
 int		main()
 {
 	char	example[] = "  NEW  Example2  ";
@@ -105,3 +104,4 @@ int		main()
 		i++;
 	}
 }
+*/

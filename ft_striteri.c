@@ -6,11 +6,11 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 23:59:52 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/08 00:36:37 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/09 16:50:19 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
@@ -25,7 +25,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
-
+/*
 void	f(unsigned int i, char *a)
 {
 	*a += 1;
@@ -38,3 +38,4 @@ int		main()
 	ft_striteri(str1, *f);
 	printf("%s", str1);
 }
+*/

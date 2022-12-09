@@ -6,7 +6,7 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 17:51:36 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/07 20:02:33 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/09 17:04:43 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,11 @@ char	*ft_substr(char *s, unsigned int start, size_t len)
 	ptr[i] = '\0';
 	return (ptr);
 }
-
+/*
 int	main()
 {
 	char str[] = "black hole";
 
 	printf("%s", ft_substr(str, 2, 6));
 }
+*/

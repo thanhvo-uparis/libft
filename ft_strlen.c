@@ -6,23 +6,24 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 20:46:26 by tvo               #+#    #+#             */
-/*   Updated: 2022/11/11 21:08:59 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/09 16:56:51 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-size_t ft_strlen(char *str)
+size_t	ft_strlen(char *str)
 {
-    size_t i;
+	size_t	i;
 
-    i = 0;
+	i = 0;
 	while (str[i])
-        i++;
-    return (i);
+		i++;
+	return (i);
 }
-
+/*
 int main()
 {
     printf("%zu", ft_strlen("hello"));
 }
+*/

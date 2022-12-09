@@ -6,14 +6,13 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 17:02:34 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/07 21:12:43 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/09 16:33:45 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-int ft_len(int nb)
+int	ft_len(int nb)
 {
 	int		count;
 
@@ -61,8 +60,9 @@ char	*ft_itoa(int n)
 	}
 	return (ptr);
 }
-
+/*
 int	main()
 {
 	printf("%s", ft_itoa(+4741));
 }
+*/

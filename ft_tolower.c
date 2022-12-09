@@ -6,20 +6,21 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 22:22:22 by tvo               #+#    #+#             */
-/*   Updated: 2022/11/18 22:24:53 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/09 17:05:12 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if (c >= 65 && c <= 90)
-        c += 32;
-    return (c);
+	if (c >= 65 && c <= 90)
+		c += 32;
+	return (c);
 }
-
-// int main()
-// {
-//     printf("%c", ft_tolower('H'));
-// }
+/*
+int main()
+{
+    printf("%c", ft_tolower('H'));
+}
+*/
