@@ -52,6 +52,5 @@ read_file.c
 read_file
 write_file
 write_file.c
-examples
 libft-war-machine
 libftTester
