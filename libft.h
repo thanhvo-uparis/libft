@@ -6,7 +6,7 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 14:24:06 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/11 15:47:39 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/11 22:07:29 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <fcntl.h>
 # include <string.h>
 
-typedef struct	s_list
+typedef		struct s_list
 {
 	void	*content;
 	struct	s_list	*next;
@@ -60,4 +60,5 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putstr_fd(char *s, int fd);
 /*ft_putnbr_fd */
+t_list *ft_lstlast(t_list *lst);
 #endif
