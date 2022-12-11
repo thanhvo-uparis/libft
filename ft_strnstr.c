@@ -6,7 +6,7 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 23:17:24 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/09 16:59:39 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/10 23:42:22 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ char	*ft_strnstr(char *big, char *little, size_t len)
 {
 	size_t	i;
 
-	if (!little)
-		return (big);
+	if (!big || !little)
+		return (NULL);
 	while (i < len)
 	{
 		if (big[0] != little[0])
