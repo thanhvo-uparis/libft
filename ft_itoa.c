@@ -6,7 +6,7 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 17:02:34 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/09 16:33:45 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/12 20:47:28 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	ft_len(int nb)
 	int		count;
 
 	count = 0;
+	if (nb == 0)
+		return (1);
 	if (nb < 0)
 	{
 		count++;
@@ -58,9 +60,12 @@ char	*ft_itoa(int n)
 	}
 	return (ptr);
 }
-/*
-int	main()
-{
-	printf("%s", ft_itoa(+4741));
-}
-*/
+// int	main()
+// {
+// 	char	*s;
+
+// 	s = ft_itoa(0);
+// 	printf("%s", s);
+// 	free(s);
+// 	return (0);
+// }
