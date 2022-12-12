@@ -6,13 +6,13 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 20:30:22 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/12 18:57:31 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/12 19:13:56 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_exist(char ch, char *set)
+int	is_exist(char ch, char const *set)
 {
 	int	i;
 

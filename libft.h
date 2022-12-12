@@ -6,12 +6,12 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 14:24:06 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/12 19:01:08 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/12 19:04:07 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 
 # include <stdlib.h>
 # include <unistd.h>
@@ -21,10 +21,10 @@
 # include <fcntl.h>
 # include <string.h>
 
-typedef		struct s_list
+typedef	struct	s_list
 {
 	void	*content;
-	struct	s_list	*next;
+	struct s_list	*next;
 }	t_list;
 
 int		ft_isalpha(int c);

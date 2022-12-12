@@ -6,7 +6,7 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 14:56:54 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/12 18:33:35 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/12 19:55:02 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,12 @@ void	*ft_calloc(size_t count, size_t sz)
 {
 	void	*ptr;
 
-	ptr = (void *)malloc(count * sz);
+	if (sz && count * sz / sz != count)
+		return (NULL);
+	ptr = malloc(count * sz);
 	if (!ptr)
 		return (NULL);
-	ft_bzero(ptr, count);
+	ft_bzero(ptr, count * sz);
 	return (ptr);
 }
 /*

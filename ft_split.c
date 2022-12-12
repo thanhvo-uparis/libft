@@ -6,13 +6,13 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 17:09:27 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/12 18:57:59 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/12 19:39:41 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count_string(char *str, char sep)
+int	ft_count_string(char const *str, char sep)
 {
 	int		i;
 	int		count;
@@ -31,7 +31,7 @@ int	ft_count_string(char *str, char sep)
 	return (count);
 }
 
-int	ft_lenword(char *str, char sep)
+int	ft_lenword(char const *str, char sep)
 {
 	int		count;
 
@@ -41,7 +41,7 @@ int	ft_lenword(char *str, char sep)
 	return (count);
 }
 
-char	*ft_word(char *str, char sep)
+char	*ft_word(char const *str, char sep)
 {
 	int		i;
 	int		len_word;
@@ -82,26 +82,28 @@ char	**ft_split(char const *s, char c)
 		while (*s && *s != c)
 			s++;
 	}
-	strings[i] = "\0";
+	strings[i] = 0;
 	return (strings);
 }
-/*
-int		main()
-{
-	char	example[] = "  NEW  Example2  ";
-	char	**ptr;
-	int		count_string;
-	char	separator;
-	int		i;
 
-	separator = ' ';
-	i = 0;
-	ptr = ft_split(example, separator);
-	count_string = ft_count_string(example, separator);
-	while (i < count_string)
-	{
-		printf("%s \n", ptr[i]);
-		i++;
-	}
-}
-*/
+// int		main()
+// {
+// 	char	example[] = "  NEW  Example2  ";
+// 	char	**ptr;
+// 	int		count_string;
+// 	char	separator;
+// 	int		i;
+
+// 	separator = ' ';
+// 	i = 0;
+// 	ptr = ft_split(example, separator);
+// 	count_string = ft_count_string(example, separator);
+// 	while (i < count_string)
+// 	{
+// 		printf("%s \n", ptr[i]);
+// 		free(ptr[i]);
+// 		i++;
+// 	}
+// 	free(ptr);
+// 	return (0);
+// }
