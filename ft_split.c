@@ -6,7 +6,7 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 17:09:27 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/10 23:33:43 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/12 18:57:59 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ char	*ft_word(char *str, char sep)
 	return (word);
 }
 
-char	**ft_split(char *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	int		i;
 	char	**strings;
@@ -85,7 +85,7 @@ char	**ft_split(char *s, char c)
 	strings[i] = "\0";
 	return (strings);
 }
-
+/*
 int		main()
 {
 	char	example[] = "  NEW  Example2  ";
@@ -104,3 +104,4 @@ int		main()
 		i++;
 	}
 }
+*/

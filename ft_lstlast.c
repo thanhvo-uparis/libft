@@ -6,15 +6,16 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 21:23:37 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/11 21:41:05 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/12 17:57:15 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-	int i;
+	int	i;
+
 	while (lst)
 	{
 		if (lst->next != NULL)

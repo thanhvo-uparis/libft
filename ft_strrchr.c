@@ -6,13 +6,13 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 17:13:03 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/12 17:19:55 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/12 18:50:00 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(char *str, int c)
+char	*ft_strrchr(const char *str, int c)
 {
 	int		i;
 

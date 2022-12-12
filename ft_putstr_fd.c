@@ -6,7 +6,7 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 04:43:14 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/09 16:48:00 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/12 17:58:28 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	if (!s)
 		return ;
-	write(fd, s, strlen(s));
+	write(fd, s, ft_strlen(s));
 }
 /*
 int	main()

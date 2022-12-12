@@ -6,14 +6,14 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 23:17:24 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/10 23:42:22 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/12 18:39:04 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 // If little is an empty string, big is returned
 // if little occurs nowhere in	big, NULL is returned
-char	*ft_strnstr(char *big, char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 

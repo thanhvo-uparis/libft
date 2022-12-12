@@ -6,20 +6,20 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 16:58:21 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/09 16:50:16 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/12 18:53:02 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *s)
+char	*ft_strdup(const char *s)
 {
 	char	*ptr;
 	int		size;
 	int		i;
 
 	i = 0;
-	size = strlen(s);
+	size = ft_strlen(s);
 	if (!s)
 		return (NULL);
 	ptr = (char *)malloc(sizeof(char) * (size + 1));

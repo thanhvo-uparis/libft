@@ -6,14 +6,14 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 13:58:52 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/12 17:48:26 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/12 18:52:29 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	res;

@@ -6,7 +6,7 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 15:50:34 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/11 16:55:53 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/12 17:57:22 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list *elmt;
+	t_list	*elmt;
 
 	elmt = (t_list *)malloc(sizeof(*elmt));
 	if (!elmt)
