@@ -6,7 +6,7 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 19:21:57 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/09 22:18:54 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/12 17:49:13 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
+	unsigned char	*ptr1;
+	unsigned char	*ptr2;
 
+	ptr1 = (unsigned char *)s1;
+	ptr2 = (unsigned char *)s2;
 	i = 0;
-// check si s1 ou s2 vide
-	while (s1[i] && s2[i] && (i < n))
-	{
-		if (s1[i] == s2[i])
-			i++;
-		else
-			break ;
-	}
-	return (s1[i] - s2[i]);
+	if (n == 0)
+		return (0);
+	while (ptr1[i] == ptr2[i] && (i < n - 1) && ptr1[i])
+		i++;
+	return (ptr1[i] - ptr2[i]);
 }
 /*
 int main()

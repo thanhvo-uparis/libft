@@ -6,7 +6,7 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 17:13:03 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/09 16:59:44 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/12 17:19:55 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ char	*ft_strrchr(char *str, int c)
 	i = 0;
 	while (str[i])
 		i++;
-	while (i > 0)
+	while (i >= 0)
 	{
-		if (str[i] == c)
-			return (&str[i]);
+		if (str[i] == (char)c)
+			return ((char *)(str + i));
 		i--;
 	}
 	return (NULL);

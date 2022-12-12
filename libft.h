@@ -6,7 +6,7 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 14:24:06 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/11 22:07:29 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/12 16:41:18 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 # include <fcntl.h>
 # include <string.h>
 
@@ -35,8 +37,8 @@ void	ft_bzero(void *ptr, size_t count);
 void    *ft_memcpy(void *dest, const void *src, size_t n);
 void    *ft_memmove(void *dest, const void *src, size_t len);
 size_t 	ft_strlcpy(char *dest, char *src, size_t destsize);
-size_t	ft_strlen(char *str);
-/* ft_strlcat */
+size_t	ft_strlen(const char *str);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 int 	ft_toupper(int c);
 int 	ft_tolower(int c);
@@ -59,6 +61,6 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putstr_fd(char *s, int fd);
-/*ft_putnbr_fd */
-t_list *ft_lstlast(t_list *lst);
+void ft_putnbr_fd(int n, int fd);
+
 #endif
