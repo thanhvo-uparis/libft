@@ -6,7 +6,7 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 19:21:57 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/12 17:49:13 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/13 20:59:16 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*ptr1;
 	unsigned char	*ptr2;
 

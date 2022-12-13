@@ -6,7 +6,7 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 17:02:34 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/13 18:46:04 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/13 22:47:23 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,9 @@ char	*ft_itoa(int n)
 	ptr = (char *)malloc(sizeof(char) * (len_nb + 1));
 	if (!ptr)
 		return (NULL);
-	ptr[len_nb] = '\0';
-	len_nb--;
+	ptr[len_nb--] = '\0';
 	if (nb == 0)
-	{
 		ptr[0] = 48;
-		return (ptr);
-	}
 	if (nb < 0)
 	{
 		ptr[0] = '-';

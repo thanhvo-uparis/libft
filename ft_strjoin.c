@@ -6,7 +6,7 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 20:00:37 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/12 18:55:53 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/13 22:37:09 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,30 +15,18 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*ptr;
-	int		total_size;
-	int		i;
-	int		j;
+	size_t	s1_len;
+	size_t	s2_len;
 
-	i = 0;
-	j = 0;
-	total_size = ft_strlen(s1) + ft_strlen(s2);
-	ptr = (char *)malloc(sizeof(char) * (total_size + 1));
-	if (!ptr)
+	s1_len = ft_strlen(s1);
+	s2_len = ft_strlen(s2);
+	if (!s1 || !s2)
 		return (NULL);
-	while (s1[i])
-	{
-		*(ptr + j) = s1[i];
-		j++;
-		i++;
-	}
-	i = 0;
-	while (s2[i])
-	{
-		*(ptr + j) = s2[i];
-		j++;
-		i++;
-	}
-	ptr[j] = '\0';
+	ptr = (char *)malloc(sizeof(char) * (s1_len + s2_len + 1));
+	if (!ptr)
+		return (0);
+	ft_strlcpy(ptr, s1, s1_len + 1);
+	ft_strlcat(ptr + (s1_len), s2, s2_len + 1);
 	return (ptr);
 }
 /*

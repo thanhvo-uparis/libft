@@ -6,7 +6,7 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 21:23:37 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/13 17:43:04 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/13 20:13:43 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstlast(t_list *lst)
 {
 	while (lst)
 	{
-		if (lst->next != NULL)
+		if (lst->next == NULL)
 			return (lst);
 		lst = lst->next;
 	}

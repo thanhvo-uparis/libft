@@ -6,7 +6,7 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 13:58:52 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/12 18:52:29 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/13 22:50:57 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,9 @@ int	ft_atoi(const char *str)
 	}
 	return (signe * res);
 }
-/*
-int main()
-{
-    char str1[] = "-4532";
+// int main()
+// {
+//     char str1[] = "-4532";
 
-    printf("%d", ft_atoi(str1));
-}
-*/
+//     printf("%d", ft_atoi(str1));
+// }

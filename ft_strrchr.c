@@ -6,7 +6,7 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 17:13:03 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/12 18:50:00 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/13 22:54:20 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strrchr(const char *str, int c)
 int main()
 {
     char *ch = "stotal42";
-    char c = 't';:w
+    char c = 't';
     char *p = strrchr(ch, c);
 
     printf("result is %s", p);
