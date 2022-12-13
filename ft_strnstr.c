@@ -6,37 +6,39 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 23:17:24 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/12 18:39:04 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/13 16:04:28 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// If little is an empty string, big is returned
-// if little occurs nowhere in	big, NULL is returned
+
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
+	size_t	j;
 
-	if (!big || !little)
-		return (NULL);
-	while (i < len)
+	if (!*little)
+		return ((char *)big);
+	i = 0;
+	while (big[i] && i < len)
 	{
-		if (big[0] != little[0])
-			return (NULL);
-		if (big[i] == little[i])
-			i++;
-		else
-			return (NULL);
+		j = 0;
+		while (big[i + j] == little[j] && (i + j) < len)
+		{
+			j++;
+			if (!little[j])
+				return ((char *)&big[i]);
+		}
+		i++;
 	}
-	return (little);
+	return (NULL);
 }
-/*
-#include <bsd/string.h>
-int main(void) {
-    char *str1 = "Foo Bar Baz";
-    char *str2 = "Bar";
+// int main()
+// {
+//     char s1[30] = "pen pineapple apple pen!";
 
-    printf("found: %s\n", strnstr(str1, str2, 4) ? "yes" : "no");
-    return 0;
-}*/
+//     char* ptr = ft_strnstr(s1, "pine", 10);
+//     printf("%s\n", ptr);
 
+//     return (0);
+// }

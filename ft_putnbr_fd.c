@@ -6,7 +6,7 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 05:10:38 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/12 13:20:28 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/13 17:03:05 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,22 +36,21 @@ void	ft_putnbr_fd(int n, int fd)
 		str = '0' + n;
 	write(fd, &str, 1);
 }
-/*
-int	main(void)
-{
-	int	fd;
 
-	fd = open("new_test.txt", O_WRONLY);
-	if (fd == -1)
-	{
-		printf("open() failed!\n");
-		return (1);
-	}
-	ft_putnbr_fd(5555, fd);
-	if (close(fd) == -1)
-	{
-		printf("close() failed!\n");
-		return (1);
-	}
-}
-*/
+// int	main(void)
+// {
+// 	int	fd;
+
+// 	fd = open("new_test.txt", O_WRONLY);
+// 	if (fd == -1)
+// 	{
+// 		printf("open() failed!\n");
+// 		return (1);
+// 	}
+// 	ft_putnbr_fd(5555, fd);
+// 	if (close(fd) == -1)
+// 	{
+// 		printf("close() failed!\n");
+// 		return (1);
+// 	}
+// }

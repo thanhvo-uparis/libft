@@ -6,7 +6,7 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 17:51:36 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/12 18:54:53 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/13 16:43:48 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,24 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*ptr;
 	size_t	i;
+	size_t	j;
+	char	*ptr;
 
 	i = 0;
-	if (!s[i])
+	j = 0;
+	if (!s)
 		return (NULL);
 	ptr = (char *)malloc(sizeof(char) * (len + 1));
 	if (!ptr)
 		return (NULL);
-	while (s[start] && (i < len))
+	while (s[i])
 	{
-		*(unsigned char *)(ptr + i) = s[start];
-		start++;
+		if (i >= start && j < len)
+		{
+			ptr[j] = s[i];
+			j++;
+		}
 		i++;
 	}
 	ptr[i] = '\0';
