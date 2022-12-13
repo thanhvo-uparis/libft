@@ -1,42 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/11 21:23:37 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/13 17:43:04 by tvo              ###   ########.fr       */
+/*   Created: 2022/12/13 17:31:41 by tvo               #+#    #+#             */
+/*   Updated: 2022/12/13 17:37:06 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void *))
 {
+	t_list	*first;
+	t_list	*new;
+
+	if (!f || !del)
+		return (NULL);
+	first = NULL;
 	while (lst)
 	{
-		if (lst->next != NULL)
-			return (lst);
+		if (!(new = ft_lstnew((*f)(lst->content))))
+		{
+			while (first)
+			{
+				new = first->next;
+				(*del)(first->content);
+				free(first);
+				first = new;
+			}
+			lst = NULL;
+			return (NULL);
+		}
+		ft_lstadd_back(&first, new);
 		lst = lst->next;
 	}
-	return (lst);
+	return (first);
 }
-/*
-int main()
-{
-	t_list l1;
-	t_list l2;
-	t_list l3;
-	t_list *begin;
-
-	begin = &l1;
-	l1.next = &l2;
-	l2.next = &l3;
-	l3.next = NULL;
-	l1.content = "student";
-	l2.content = "42";
-	l3.content = "Paris";
-	printfft_lstlast(begin);
-}
-*/

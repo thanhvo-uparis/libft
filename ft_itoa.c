@@ -6,7 +6,7 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 17:02:34 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/12 20:47:28 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/13 18:46:04 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,14 @@
 
 int	ft_len(int nb)
 {
-	int		count;
+	size_t	count;
 
 	count = 0;
 	if (nb == 0)
 		return (1);
 	if (nb < 0)
-	{
 		count++;
-		nb *= -1;
-	}
-	while (nb > 0)
+	while (nb)
 	{
 		nb /= 10;
 		count++;
@@ -36,26 +33,29 @@ char	*ft_itoa(int n)
 {
 	int		len_nb;
 	char	*ptr;
+	long	nb;
 
 	len_nb = ft_len(n);
+	nb = n;
 	ptr = (char *)malloc(sizeof(char) * (len_nb + 1));
 	if (!ptr)
 		return (NULL);
-	ptr[len_nb--] = '\0';
-	if (n == 0)
+	ptr[len_nb] = '\0';
+	len_nb--;
+	if (nb == 0)
 	{
 		ptr[0] = 48;
 		return (ptr);
 	}
-	if (n < 0)
+	if (nb < 0)
 	{
 		ptr[0] = '-';
-		n *= -1;
+		nb *= -1;
 	}
-	while (n > 0)
+	while (nb > 0)
 	{
-		ptr[len_nb] = (n % 10) + '0';
-		n /= 10;
+		ptr[len_nb] = (nb % 10) + '0';
+		nb /= 10;
 		len_nb--;
 	}
 	return (ptr);
@@ -64,7 +64,7 @@ char	*ft_itoa(int n)
 // {
 // 	char	*s;
 
-// 	s = ft_itoa(0);
+// 	s = ft_itoa(-2147483648);
 // 	printf("%s", s);
 // 	free(s);
 // 	return (0);

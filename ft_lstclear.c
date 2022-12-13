@@ -1,42 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/11 21:23:37 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/13 17:43:04 by tvo              ###   ########.fr       */
+/*   Created: 2022/12/13 17:30:49 by tvo               #+#    #+#             */
+/*   Updated: 2022/12/13 17:36:14 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	while (lst)
-	{
-		if (lst->next != NULL)
-			return (lst);
-		lst = lst->next;
-	}
-	return (lst);
-}
-/*
-int main()
-{
-	t_list l1;
-	t_list l2;
-	t_list l3;
-	t_list *begin;
+	t_list	*tmp;
 
-	begin = &l1;
-	l1.next = &l2;
-	l2.next = &l3;
-	l3.next = NULL;
-	l1.content = "student";
-	l2.content = "42";
-	l3.content = "Paris";
-	printfft_lstlast(begin);
+	if (!del || !lst || !*lst)
+		return ;
+	while (lst && *lst)
+	{
+		tmp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = tmp;
+	}
 }
-*/

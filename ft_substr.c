@@ -6,43 +6,41 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 17:51:36 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/13 16:43:48 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/13 19:05:51 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	size_t	j;
+	size_t	len_check;
 	char	*ptr;
 
 	i = 0;
-	j = 0;
 	if (!s)
 		return (NULL);
-	ptr = (char *)malloc(sizeof(char) * (len + 1));
+	len_check = ft_strlen(s);
+	if ((start + len) > len_check)
+		len = len_check - start;
+	if (start > len_check)
+		len = 0;
+	ptr = (char *)malloc(sizeof(*s) * (len + 1));
 	if (!ptr)
 		return (NULL);
-	while (s[i])
+	while (i < len)
 	{
-		if (i >= start && j < len)
-		{
-			ptr[j] = s[i];
-			j++;
-		}
+		ptr[i] = s[i + start];
 		i++;
 	}
 	ptr[i] = '\0';
 	return (ptr);
 }
-/*
-int	main()
-{
-	char str[] = "black hole";
 
-	printf("%s", ft_substr(str, 2, 6));
-}
-*/
+// int	main()
+// {
+// 	char str[] = "black hole";
+
+// 	printf("%s", ft_substr(str, 0, 42000));
+// }

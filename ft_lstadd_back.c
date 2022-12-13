@@ -6,14 +6,13 @@
 /*   By: tvo <tvo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 21:44:43 by tvo               #+#    #+#             */
-/*   Updated: 2022/12/11 23:52:59 by tvo              ###   ########.fr       */
+/*   Updated: 2022/12/13 17:35:26 by tvo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void
-	ft_lstadd_back(t_list **alst, t_list *new)
+void	ft_lstadd_back(t_list **alst, t_list *new)
 {
 	t_list	*last;
 
